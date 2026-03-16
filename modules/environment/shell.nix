@@ -8,8 +8,8 @@
     syntaxHighlighting.enable = true;
 
     interactiveShellInit = ''
-      eval "\"
-      eval "\"
+      eval "$(${pkgs.starship}/bin/starship init zsh)"
+      eval "$(${pkgs.zoxide}/bin/zoxide init zsh)"
     '';
 
     shellAliases = {};
@@ -19,7 +19,7 @@
     enable = true;
     settings = {
       add_newline = false;
-      format = "\\";
+      format = "$directory$character";
       character = {
         success_symbol = "[λ](bold green)";
         error_symbol = "[λ](bold red)";
