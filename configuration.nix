@@ -1,15 +1,15 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [
+  imports = [ 
     ./hardware-configuration.nix
-    ./modules/core/default.nix
-    ./modules/hardware/default.nix
-    ./modules/services/default.nix
     ./modules/users/default.nix
+    ./modules/core/default.nix
     ./modules/gui/default.nix
     ./modules/environment/default.nix
+    ./modules/services/default.nix
   ];
 
+  nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.11";
 }

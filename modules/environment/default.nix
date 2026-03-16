@@ -3,6 +3,7 @@
 {
   imports = [
     ./shell.nix
+    ./neovim.nix
   ];
 
   environment.systemPackages = with pkgs; [
